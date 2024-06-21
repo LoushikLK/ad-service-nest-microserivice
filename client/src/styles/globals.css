@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap'); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f97316 transparent;
+}
+::-webkit-scrollbar {
+  width: 0.25em;
+  height: 0.25em;
+}
+::-webkit-scrollbar-thumb {
+  background: #f97316;
+  border-radius: 10em;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  background-color: white;
+  color: black;
+  scroll-behavior: smooth;
+}
+*:disabled {
+  cursor: not-allowed;
+}
+
+/* *::-webkit-scrollbar {
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: white;
+} */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+[data-error-msg] {
+  @apply text-red-500 text-sm before:content-["*"];
+}
+
+@layer components {
+  .main-container {
+    @apply container w-full mx-auto px-4 md:px-5 lg:px-7 2xl:px-9;
+  }
+  .title {
+    @apply text-xl md:text-2xl lg:text-3xl capitalize tracking-wide font-bold;
+  }
+  .common-transition {
+    @apply !transition-all !duration-300 !ease-in-out;
+  }
+  .btn-gradient {
+    @apply bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 text-white font-semibold rounded-md capitalize tracking-wide hover:bg-gradient-to-l;
+  }
+  .btn-primary {
+    @apply bg-primary text-white font-semibold rounded-md capitalize tracking-wide hover:bg-blue-600;
+  }
+  .practice {
+    @apply bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500;
+  }
+}
